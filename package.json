@@ -28,7 +28,10 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
+		"@supabase/supabase-js": "^1.35.4",
 		"cookie": "^0.4.1",
-		"svelte-images": "^0.0.95"
+		"daisyui": "^2.20.0",
+		"svelte-images": "^0.0.95",
+		"vercel": "^27.2.0"
 	}
 }
