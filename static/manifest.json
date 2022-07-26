@@ -1,6 +1,8 @@
 {
 	"name": "@yuxxeun",
 	"short_name": "@yuxxeun",
+	"description": "making cool shit cyberetically",
+	"scope": "/",
 	"start_url": "/",
 	"icons": [
 		{

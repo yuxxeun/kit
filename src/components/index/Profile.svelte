@@ -5,8 +5,8 @@
 <style>
 	img {
 		border-radius: 999px !important;
-		height: 200px;
-		width: 200px;
+		height: 192px;
+		width: 192px;
 		border: 4px solid aliceblue;
 	}
 </style>
