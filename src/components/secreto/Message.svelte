@@ -1,6 +1,6 @@
 <script>
 	import supabase from '../../lib/db';
-	// import moment from 'moment';
+	import moment from 'moment';
 
 	const onInput = (event) => {
 		if (event.key !== 'Enter') return;
@@ -124,7 +124,7 @@
 				<div class="mockup-code card w-96 my-2 mx-auto bg-base-100 shadow-xl">
 					<div class="card-body items-center text-center">
 						<div class="badge badge-secondary font-space">
-							<!-- {moment(comment.created_at).format('Do MMMM, YYYY')} -->
+							{moment(comment.created_at).format('Do MMMM, YYYY')}
 						</div>
 						<p class="font-inter text-lg">{comment.txt}</p>
 					</div>
