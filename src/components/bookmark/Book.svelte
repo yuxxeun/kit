@@ -1,12 +1,17 @@
 <script>
 	import { fly } from 'svelte/transition';
+	import supabase from '../../lib/db';
 
-	async function getBooks() {
-		let response = await fetch('https://raw.githubusercontent.com/yuxxeun/nxd/main/data/libs.json');
-		let books = await response.json();
-		return books;
+	// fetch the data
+	async function getData() {
+		const { data, error } = await supabase
+			.from('bookmarks')
+			.select('*')
+			.order('id', { ascending: false });
+		if (error) throw new Error(error.message);
+		return data;
 	}
-	const promise = getBooks();
+	const promise = getData();
 </script>
 
 <div class="text-center justify-center items-center mx-auto">
@@ -14,24 +19,24 @@
 		<div class="my-3">
 			<img
 				src="/loading.svg"
-				class="animate-spin-slow mx-auto my-10"
+				class="animate-spin mx-auto my-10"
 				alt="Reactivity...."
 				width="200"
 			/>
 		</div>
-	{:then book}
-		{#each book as book}
+	{:then data}
+		{#each data as book}
 			<ul
 				class="my-4 py-4 backdrop-blur-md bg-white rounded-lg"
 				transition:fly={{ y: 150, duration: 1500 }}
 			>
 				<li class="text-xl text-black space-x-2 font-space px-5">
-					<span class="font-extrabold text-fuchsia-500">{book.judul}</span>
-					— {book.penulis}
+					<span class="font-extrabold text-fuchsia-500">{book.title}</span>
+					— {book.author}
 					<span class="text-center font-semibold bg-fuchsia-500 text-white px-2 rounded-md"
 						>{book.status}</span
 					>
-					<span class="text-fuchsia-500 bg-white font-bold px-2 rounded-md">{book.tahun}</span>
+					<span class="text-fuchsia-500 bg-white font-bold px-2 rounded-md">{book.year}</span>
 				</li>
 			</ul>
 		{/each}
