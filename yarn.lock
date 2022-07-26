@@ -46,11 +46,6 @@
     "minimatch" "^3.1.2"
     "strip-json-comments" "^3.1.1"
 
-"@fontsource/fira-mono@^4.5.0":
-  "integrity" "sha512-sFuSPB/Km8B1fy3CH0NqO5Nb4GmVMzp3XFaw6MwK293xhm3OnB68QJawwTTjLewcrS78wOTAhTUB058qxurJoQ=="
-  "resolved" "https://registry.npmjs.org/@fontsource/fira-mono/-/fira-mono-4.5.8.tgz"
-  "version" "4.5.8"
-
 "@humanwhocodes/config-array@^0.9.2":
   "integrity" "sha512-ObyMyWxZiCu/yTisA7uzx81s40xR2fD5Cg/2Kq7G02ajkNubJf6BopgDTmDyc3U7sXpNKM8cYOw7s7Tyr+DnCw=="
   "resolved" "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.9.5.tgz"
@@ -80,7 +75,7 @@
   "resolved" "https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.14.tgz"
   "version" "1.4.14"
 
-"@jridgewell/trace-mapping@0.3.9":
+"@jridgewell/trace-mapping@^0.3.9", "@jridgewell/trace-mapping@0.3.9":
   "integrity" "sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ=="
   "resolved" "https://registry.npmjs.org/@jridgewell/trace-mapping/-/trace-mapping-0.3.9.tgz"
   "version" "0.3.9"
@@ -212,7 +207,7 @@
     "set-cookie-parser" "^2.4.8"
     "tiny-glob" "^0.2.9"
 
-"@sveltejs/adapter-vercel@1.0.0-next.65":
+"@sveltejs/adapter-vercel@^1.0.0-next.65", "@sveltejs/adapter-vercel@1.0.0-next.65":
   "integrity" "sha512-RV3HL7Ic7pGgIoBSHPwN1pBX96Km1X683oHImPHAKX9h/WOvJZ3bY5+IWNRcR8tx9rPB5gfMRg+msvPSBr3RVw=="
   "resolved" "https://registry.npmjs.org/@sveltejs/adapter-vercel/-/adapter-vercel-1.0.0-next.65.tgz"
   "version" "1.0.0-next.65"
@@ -658,7 +653,7 @@
     "ansi-styles" "^4.1.0"
     "supports-color" "^7.1.0"
 
-"chokidar@^3.5.3":
+"chokidar@^3.4.1", "chokidar@^3.5.3":
   "integrity" "sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw=="
   "resolved" "https://registry.npmjs.org/chokidar/-/chokidar-3.5.3.tgz"
   "version" "3.5.3"
@@ -2179,7 +2174,7 @@
   dependencies:
     "queue-microtask" "^1.2.2"
 
-"sade@^1.8.1":
+"sade@^1.7.4", "sade@^1.8.1":
   "integrity" "sha512-xal3CZX1Xlo/k4ApwCFrHVACi9fBqJ7V+mwhBsuf/1IOKbBy098Fex+Wa/5QMubw09pSZ/u8EY8PWgevJsXp1A=="
   "resolved" "https://registry.npmjs.org/sade/-/sade-1.8.1.tgz"
   "version" "1.8.1"
@@ -2354,17 +2349,26 @@
   "resolved" "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   "version" "1.0.0"
 
+"svelte-check@^2.8.0":
+  "integrity" "sha512-HRL66BxffMAZusqe5I5k26mRWQ+BobGd9Rxm3onh7ZVu0nTk8YTKJ9vu3LVPjUGLU9IX7zS+jmwPVhJYdXJ8vg=="
+  "resolved" "https://registry.npmjs.org/svelte-check/-/svelte-check-2.8.0.tgz"
+  "version" "2.8.0"
+  dependencies:
+    "@jridgewell/trace-mapping" "^0.3.9"
+    "chokidar" "^3.4.1"
+    "fast-glob" "^3.2.7"
+    "import-fresh" "^3.2.1"
+    "picocolors" "^1.0.0"
+    "sade" "^1.7.4"
+    "svelte-preprocess" "^4.0.0"
+    "typescript" "*"
+
 "svelte-hmr@^0.14.12":
   "integrity" "sha512-4QSW/VvXuqVcFZ+RhxiR8/newmwOCTlbYIezvkeN6302YFRE8cXy0naamHcjz8Y9Ce3ITTZtrHrIL0AGfyo61w=="
   "resolved" "https://registry.npmjs.org/svelte-hmr/-/svelte-hmr-0.14.12.tgz"
   "version" "0.14.12"
 
-"svelte-images@^0.0.95":
-  "integrity" "sha512-fu7KC/TJDoI3kPg8l47BxH+2jK5s/vd3PfyXbmUyF6ZeFA9XK/b14JS04ViQ9Xh9Ik+7A7oix95St3cRFP9RIw=="
-  "resolved" "https://registry.npmjs.org/svelte-images/-/svelte-images-0.0.95.tgz"
-  "version" "0.0.95"
-
-"svelte-preprocess@^4.10.7":
+"svelte-preprocess@^4.0.0", "svelte-preprocess@^4.10.7":
   "integrity" "sha512-sNPBnqYD6FnmdBrUmBCaqS00RyCsCpj2BG58A1JBswNF7b0OKviwxqVrOL/CKyJrLSClrSeqQv5BXNg2RUbPOw=="
   "resolved" "https://registry.npmjs.org/svelte-preprocess/-/svelte-preprocess-4.10.7.tgz"
   "version" "4.10.7"
@@ -2376,7 +2380,7 @@
     "sorcery" "^0.10.0"
     "strip-indent" "^3.0.0"
 
-"svelte@^3.2.0", "svelte@^3.23.0", "svelte@^3.44.0", "svelte@^3.46.0", "svelte@>=3.19.0":
+"svelte@^3.2.0", "svelte@^3.23.0", "svelte@^3.24.0", "svelte@^3.44.0", "svelte@^3.46.0", "svelte@>=3.19.0":
   "integrity" "sha512-+lmjic1pApJWDfPCpUUTc1m8azDqYCG1JN9YEngrx/hUyIcFJo6VZhj0A1Ai0wqoHcEIuQy+e9tk+4uDgdtsFA=="
   "resolved" "https://registry.npmjs.org/svelte/-/svelte-3.49.0.tgz"
   "version" "3.49.0"
@@ -2530,7 +2534,7 @@
   dependencies:
     "is-typedarray" "^1.0.0"
 
-"typescript@^3.9.5 || ^4.0.0", "typescript@>=2.7", "typescript@4.3.4":
+"typescript@*", "typescript@^3.9.5 || ^4.0.0", "typescript@>=2.7", "typescript@4.3.4":
   "integrity" "sha512-uauPG7XZn9F/mo+7MrsRjyvbxFpzemRjKEZXS4AK83oP2KKOJPvb+9cO/gmnv8arWZvhnjVOXz7B49m1l0e9Ew=="
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.3.4.tgz"
   "version" "4.3.4"

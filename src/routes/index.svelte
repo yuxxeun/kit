@@ -7,6 +7,7 @@
 <svelte:head>
 	<title>@yuxxeun</title>
 	<meta name="title" content="@yuxxeun" />
+	<meta name="robots" content="noindex, nofollow" />
 	<meta name="description" content="making cool shit cybernetically." />
 	<meta name="robots" content="noindex, nofollow" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
