@@ -34,7 +34,8 @@ yarn dev
 yarn dev -- --open
 ```
 
-Production Environment
+## Production Environment
+
 This site is should be statically generated so you need to run `yarn build`. Also, this site probably will be deployed to Netflify. Or Zeit Now aka Vercel? Or Docker? Or to my kubernetes clusters? Who knows?
 
 ## License
