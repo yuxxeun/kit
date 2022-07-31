@@ -1,38 +1,42 @@
-# create-svelte
+# kit
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This website is built with SvelteKit, is an application framework powered by Svelte — build bigger apps with a smaller footprint.
 
-## Creating a project
+SvelteKit is a framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Unlike single-page apps, SvelteKit doesn't compromise on SEO, progressive enhancement or the initial load experience — but unlike traditional server-rendered apps, navigation is instantaneous for that app-like feel.
 
-```bash
-# create a new project in the current directory
-npm init svelte
+Basically I don't care with any SEO-related things, I use SvelteKit over Svelte was for flexibility sake on filesystem-based routing.
 
-# create a new project in my-app
-npm init svelte my-app
-```
+## Getting started
+
+Ah, here we go again.
+
+1. Clone this repo
+2. Run `yarn`
+3. Take S2 program
+4. Does yarn install still running? If yes, take PhD program
+5. If not, run `yarn dev`
+   Anyone here still using `npm` over `yarn`?
+
+## Directory Structures
+
+All routes are lives in `src/routes` directory. I use common (read: boring) naming conventions in naming directory and file. So you should be familiar.
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+start a development server:
 
 ```bash
-npm run dev
+yarn dev
 
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
+yarn dev -- --open
 ```
 
-## Building
+Production Environment
+This site is should be statically generated so you need to run `yarn build`. Also, this site probably will be deployed to Netflify. Or Zeit Now aka Vercel? Or Docker? Or to my kubernetes clusters? Who knows?
 
-To create a production version of your app:
+## License
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+`MIT`. Why not.

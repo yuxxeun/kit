@@ -1,8 +1,8 @@
 <script>
 	import { fly } from 'svelte/transition';
-	import supabase from '../../lib/db';
+	import supabase from '$lib/db';
 
-	// fetch the data
+	// fetch the data from database (in this case supabase)
 	async function getData() {
 		const { data, error } = await supabase
 			.from('bookmarks')
@@ -17,12 +17,7 @@
 <div class="text-center justify-center items-center mx-auto">
 	{#await promise}
 		<div class="my-3">
-			<img
-				src="/loading.svg"
-				class="animate-spin mx-auto my-10"
-				alt="Reactivity...."
-				width="200"
-			/>
+			<img src="/loading.svg" class="animate-spin mx-auto my-10" alt="Reactivity...." width="200" />
 		</div>
 	{:then data}
 		{#each data as book}

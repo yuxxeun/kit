@@ -1,5 +1,4 @@
 <script>
-	import Header from '../../components/bookmark/Header.svelte';
 	import Book from '../../components/bookmark/Book.svelte';
 </script>
 
@@ -31,6 +30,5 @@
 </svelte:head>
 
 <section>
-	<Header />
 	<Book />
 </section>
